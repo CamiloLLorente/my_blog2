@@ -1,7 +1,6 @@
-import React from 'react';
 import { Facebook, Twitter, Instagram } from 'lucide-react';
 
-const Footer = () => {
+const Footer = (): JSX.Element => {
   return (
     <footer className="bg-[#004694] text-white py-8">
       <div className="container mx-auto px-4">

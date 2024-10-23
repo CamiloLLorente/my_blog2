@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Search from '../components/Search';
 import BlogPost from '../components/BlogPost';
 import { getPosts, Post } from '../data/posts';
@@ -36,6 +36,7 @@ const Blog = () => {
             id={post.id}
             title={post.title}
             description={post.description}
+            tags={post.tags}
             date={post.date}
             image={post.image}
           />
