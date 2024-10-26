@@ -1,7 +1,9 @@
 import  { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import BlogPost from '../components/BlogPost';
+import {ArrowRightCircle} from 'lucide-react';
 import { getPosts, Post } from '../data/posts';
+import image from "../../public/image/jesus.png";
 
 const Home = (): JSX.Element => {
   const [recentPosts, setRecentPosts] = useState<Post[]>([]);
@@ -19,18 +21,37 @@ const Home = (): JSX.Element => {
 
   return (
     <div>
-      <div className="relative mb-12">
-        <img
-          src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-          alt="Hero image"
-          className="w-full h-[500px] object-cover"
-        />
+      <div className="relative">
+      <img
+        src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        alt="Hero image"
+        className="w-full h-[700px] object-cover filter blur-[1.5px] brightness-50"
+      />
+      
+      <div className="absolute container mx-auto inset-0 flex flex-col items-start justify-start px-20 py-40 text-center text-white">
+        <div className=''>
+          <img
+            src={image}
+            alt="Hero image"
+            className="w-200 h-[200px] object-cover "
+          />
         
+
+        </div>
+        <h1 className="text-white text-7xl font-bold  mb-2">
+          El camino, la verdad y la vida.
+        </h1>
+        <h2 className="text-[#FFA400] text-4xl font-bold">
+          Un viaje de fe y descubrimiento
+        </h2>
       </div>
+    </div>
 
 
-      <section className="mb-12">
+
+      <section className="mt-20 bg-[#E8E6E6] px-6 py-5 container mx-auto">
         <h2 className="text-2xl font-bold text-[#004694] mb-4">Lo más reciente</h2>
+
         <div className="grid gap-8 md:grid-cols-3">
           {recentPosts.map((post) => (
             <BlogPost
@@ -44,9 +65,23 @@ const Home = (): JSX.Element => {
             />
           ))}
         </div>
+        <div className="flex justify-center g-4 mt-8">
+          <Link
+            to="/blog"
+          >
+            <button
+              type="submit"
+              className="bg-[#004694] text-white px-4 py-2 rounded hover:bg-[#003674] transition-colors flex "
+            >
+              <span className="mr-2">Ver mas</span> <span className="mt-[1px]"><ArrowRightCircle size={20} /></span>
+            </button>
+          </Link>
+          
+          
+        </div>
       </section>
 
-      <section className="mb-12">
+      <section className="mb-12 bg-[#f2f2f2] px-6 py-12 container mx-auto">
         <h2 className="text-2xl font-bold text-[#004694] mb-4">Lo más visto</h2>
         <div className="grid gap-8 md:grid-cols-3">
           {popularPosts.map((post) => (
@@ -61,16 +96,21 @@ const Home = (): JSX.Element => {
             />
           ))}
         </div>
+        <div className="flex justify-center g-4 mt-8">
+          <Link
+            to="/blog"
+          >
+            <button
+              type="submit"
+              className="bg-[#004694] text-white px-4 py-2 rounded hover:bg-[#003674] transition-colors flex "
+            >
+              <span className="mr-2">Ver mas</span> <span className="mt-[1px]"><ArrowRightCircle size={20} /></span>
+            </button>
+          </Link>
+          
+          
+        </div>
       </section>
-
-      <div className="text-center">
-        <Link
-          to="/blog"
-          className="bg-[#004694] text-white px-6 py-3 rounded-md text-lg hover:bg-[#003674] transition-colors"
-        >
-          Ver todos los artículos
-        </Link>
-      </div>
     </div>
   );
 };
