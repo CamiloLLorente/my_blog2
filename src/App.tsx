@@ -7,6 +7,7 @@ import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import PostView from './pages/PostView';
 import { About } from './pages/About';
+import DiscoverAndLearn from './pages/DiscoverAndLearn';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route path="/post/:id" element={<PostView />} />
+            <Route path="/discover-and-learn" element={<DiscoverAndLearn />} />
           </Routes>
         </main>
         <Footer />
