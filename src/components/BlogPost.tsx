@@ -13,7 +13,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ id, title, description, tags, date,
           <p className="text-gray-600 mb-4 text-sm">{description}</p>
           <div className="text-xs text-gray-500 flex justify-start mb-2">
               {(tags ?? []).map((tag, index) => (
-                <span key={index} className='px-2 py-1 border border-gray-500 mr-2 rounded-md '>#{tag} </span>
+                <span key={index} className='px-2 py-1 border border-[#FFA400] mr-2 rounded-md '>#{tag} </span>
               ))}
           </div>
           <div className="flex justify-between items-center">

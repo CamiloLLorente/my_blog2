@@ -4,6 +4,7 @@ import BlogPost from '../components/BlogPost';
 import {ArrowRightCircle} from 'lucide-react';
 import { getPosts, Post } from '../data/posts';
 import image from "../../public/image/jesus.png";
+import image2 from "../../public/image/pexels-photo-64779.webp";
 
 const Home = (): JSX.Element => {
   const [recentPosts, setRecentPosts] = useState<Post[]>([]);
@@ -23,12 +24,12 @@ const Home = (): JSX.Element => {
     <div>
       <div className="relative">
         <img
-          src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          src={image2}
           alt="Hero image"
-          className="w-full h-[700px] object-cover filter blur-[1.5px] brightness-50"
+          className="w-full h-[85vh] object-cover "
         />
       
-        <div className="absolute container mx-auto inset-0 flex flex-col items-start justify-start px-20 py-40 text-center text-white">
+        <div className="absolute container mx-auto inset-0 flex flex-col items-start justify-start px-5 py-20 text-center text-white">
           <div className=''>
             <img
               src={image}
@@ -48,8 +49,11 @@ const Home = (): JSX.Element => {
 
       <section className="bg-[#f2f2f2]  py-[100px]">
         <div className="container mx-auto px-6 ">
-          <h2 className="text-3xl text-center text-[#FFA400] mb-4">Blogs</h2>
-          <h2 className="text-5xl font-bold text-center text-[#004694] mb-10">LO MÁS VISTO</h2>
+            <h2 className="text-4xl text-center text-[#FFA400] mb-4">Blogs</h2>
+            <h2 className="text-4xl font-bold text-center text-[#004694] mb-5">LO MÁS VISTO</h2>
+            <p className="text-center text-lg text-gray-500 mb-[50px] max-w-[800px] mx-auto">
+            Explora nuestros blogs más recientes y populares. Encuentra inspiración, conocimiento y descubre nuevas perspectivas en cada artículo.
+            </p>
 
           <div className="grid gap-8 md:grid-cols-3">
             {recentPosts.map((post) => (
@@ -81,11 +85,12 @@ const Home = (): JSX.Element => {
         </div>
       </section>
 
-      <section className="bg-[#E8E6E6]  py-[100px]">
+      <section className="bg-[#E8E6E6]  py-[60px]">
         <div className="container mx-auto px-6 ">
-          <h2 className="text-3xl text-center text-[#FFA400] mb-4">Blogs</h2>
-          <h2 className="text-5xl font-bold text-center text-[#004694] mb-10">LO MÁS VISTO</h2>
-
+          <h2 className="text-4xl text-center text-[#FFA400] mb-2">Descubre y Aprende</h2>
+          <h2 className="text-4xl font-bold text-center text-[#004694] mb-5"> Enriquese tus conocimientos</h2>
+          <p className="text-center text-lg text-gray-500 mb-[80px] max-w-[800px] mx-auto">
+            Explora nuestros blogs más recientes y populares. Encuentra inspiración, conocimiento y descubre nuevas perspectivas en cada artículo.</p>
           <div className="grid gap-8 md:grid-cols-3">
             {recentPosts.map((post) => (
               <BlogPost
