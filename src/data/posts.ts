@@ -62,6 +62,30 @@ const posts: Post[] = [
   }
 ];
 
+const learning: Post[] = [
+  {
+    id: 1,
+    title: "Seccion de versiculos de la biblia",
+    description: "Encuentra versículos inspiradores para reflexionar, fortalecer tu fe y guiar tu vida espiritual.",
+    date: "2024-03-15",
+    views: 1500,
+    tags: ["Aprende", "biblia", "Versiculos"],
+    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    content: "En esta sección encontrarás una colección de versículos bíblicos cuidadosamente seleccionados para reflexionar, inspirar y fortalecer la fe. Cada versículo ha sido elegido por su relevancia en temas de esperanza, amor, sabiduría y guía espiritual. Ya sea para meditar en la palabra de Dios o para compartir con otros, este espacio está diseñado para ayudarte a profundizar en el mensaje de la Biblia y aplicarlo en tu vida diaria."
+  },
+  {
+    id: 2,
+    title: "Versiculos favoritos",
+    description: "Encuentra tus versículos favoritos y sigue aprendiendo de la palabra de Dios.",
+    date: "2024-03-10",
+    views: 1200,
+    tags: ["css", "frontend", "tutorial"],
+    image: "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    content: "Explora una selección de tus versículos favoritos para inspirarte y seguir aprendiendo de la palabra de Dios. Esta sección está diseñada para fortalecer tu fe, brindarte esperanza y guiarte en tu crecimiento espiritual, ayudándote a aplicar los mensajes bíblicos en tu vida diaria."
+  },
+
+];
+
 export const getPosts = (): Promise<Post[]> => {
   return new Promise((resolve) => {
     setTimeout(() => {
