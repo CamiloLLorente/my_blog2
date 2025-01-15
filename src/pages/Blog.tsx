@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Search from '../components/Search';
-import BlogPost from '../components/BlogPost';
+import BlogPost from '../components/Card';
 import { getPosts, Post } from '../data/posts';
 
 const Blog = () => {

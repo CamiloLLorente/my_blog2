@@ -1,6 +1,6 @@
 import  { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import BlogPost from '../components/BlogPost';
+import BlogPost from '../components/Card';
 import {ArrowRightCircle} from 'lucide-react';
 import { getPosts, Post } from '../data/posts';
 import image from "../../public/image/jesus.png";

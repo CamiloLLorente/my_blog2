@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import type { BlogPostProps } from '../config/type';
 
-const BlogPost: React.FC<BlogPostProps> = ({ id, title, description, tags, date, image }) => {
+const Card: React.FC<BlogPostProps> = ({ id, title, description, tags, date, image }) => {
   console.log({ id, title, description, tags, date, image });
   return (
     <article className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow overflow-hidden transition-transform transform hover:scale-105">
@@ -32,4 +32,4 @@ const BlogPost: React.FC<BlogPostProps> = ({ id, title, description, tags, date,
   );
 };
 
-export default BlogPost;
+export default Card;
