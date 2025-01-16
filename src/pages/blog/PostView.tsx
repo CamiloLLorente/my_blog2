@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { getPostById, Post } from '../data/posts';
+import { getPostById, Post } from '../../data/posts';
 
 const PostView = () => {
   const { id } = useParams<{ id: string }>();

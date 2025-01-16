@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import Search from '../components/Search';
-import BlogPost from '../components/Card';
-import { getPosts, Post } from '../data/posts';
+import Search from '../../components/Search';
+import BlogPost from '../../components/Card';
+import { getPosts, Post } from '../../data/posts';
 
 const Blog = () => {
   const [posts, setPosts] = useState<Post[]>([]);
@@ -39,6 +39,7 @@ const Blog = () => {
             tags={post.tags}
             date={post.date}
             image={post.image}
+            link={`/post/${post.id}`}
           />
         ))}
       </div>

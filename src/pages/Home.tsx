@@ -1,20 +1,21 @@
 import  { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import BlogPost from '../components/Card';
+import Card from '../components/Card';
 import {ArrowRightCircle} from 'lucide-react';
-import { getPosts, Post } from '../data/posts';
+import { getPosts, Post, getEdutainment, Edutainment } from '../data/posts';
 import image from "../../public/image/jesus.png";
 import image2 from "../../public/image/pexels-photo-64779.webp";
 
 const Home = (): JSX.Element => {
   const [recentPosts, setRecentPosts] = useState<Post[]>([]);
-  const [popularPosts, setPopularPosts] = useState<Post[]>([]);
+  const [edutainment, setEdutainment] = useState<Edutainment[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
       const fetchedPosts = await getPosts();
+      const fetchedEdutainment = await getEdutainment();
+      setEdutainment(fetchedEdutainment.slice(0, 3));
       setRecentPosts(fetchedPosts.slice(0, 3));
-      setPopularPosts(fetchedPosts.sort((a, b) => b.views - a.views).slice(0, 3));
     };
     fetchPosts();
   }, []);
@@ -57,7 +58,7 @@ const Home = (): JSX.Element => {
 
           <div className="grid gap-8 md:grid-cols-3">
             {recentPosts.map((post) => (
-              <BlogPost
+              <Card
                 key={post.id}
                 id={post.id}
                 title={post.title}
@@ -65,6 +66,7 @@ const Home = (): JSX.Element => {
                 tags={post.tags}
                 date={post.date}
                 image={post.image}
+                link={`/post/${post.id}`}
               />
             ))}
           </div>
@@ -92,15 +94,15 @@ const Home = (): JSX.Element => {
           <p className="text-center text-lg text-gray-500 mb-[80px] max-w-[800px] mx-auto">
             Explora nuestros blogs más recientes y populares. Encuentra inspiración, conocimiento y descubre nuevas perspectivas en cada artículo.</p>
           <div className="grid gap-8 md:grid-cols-3">
-            {recentPosts.map((post) => (
-              <BlogPost
-                key={post.id}
-                id={post.id}
-                title={post.title}
-                description={post.description}
-                tags={post.tags}
-                date={post.date}
-                image={post.image}
+            {edutainment.map((edutainment) => (
+              <Card
+                key={edutainment.id}
+                id={edutainment.id}
+                title={edutainment.title}
+                description={edutainment.description}
+                tags={edutainment.tags}
+                image={edutainment.image}
+                link={edutainment.link}
               />
             ))}
           </div>

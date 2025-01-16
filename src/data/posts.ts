@@ -9,6 +9,17 @@ export interface Post {
   content: string;
 }
 
+export interface Edutainment {
+  id: number;
+  title: string;
+  description: string;
+  views: number;
+  tags: string[];
+  image: string;
+  content: string;
+  link: string;
+}
+
 const posts: Post[] = [
   {
     id: 1,
@@ -62,43 +73,52 @@ const posts: Post[] = [
   }
 ];
 
-const learning: Post[] = [
+const Edutainment: Edutainment[] = [
   {
     id: 1,
-    title: "Seccion de versiculos de la biblia",
-    description: "Encuentra versículos inspiradores para reflexionar, fortalecer tu fe y guiar tu vida espiritual.",
-    date: "2024-03-15",
+    title: "Bible Verses Section",
+    description: "Find inspiring verses to reflect on, strengthen your faith, and guide your spiritual life.",
     views: 1500,
-    tags: ["Aprende", "biblia", "Versiculos"],
+    tags: ["Learn", "Bible", "Verses"],
     image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    content: "En esta sección encontrarás una colección de versículos bíblicos cuidadosamente seleccionados para reflexionar, inspirar y fortalecer la fe. Cada versículo ha sido elegido por su relevancia en temas de esperanza, amor, sabiduría y guía espiritual. Ya sea para meditar en la palabra de Dios o para compartir con otros, este espacio está diseñado para ayudarte a profundizar en el mensaje de la Biblia y aplicarlo en tu vida diaria."
+    content: "In this section, you will find a collection of carefully selected Bible verses to reflect on, inspire, and strengthen your faith. Each verse has been chosen for its relevance to themes of hope, love, wisdom, and spiritual guidance. Whether for meditating on God's word or sharing with others, this space is designed to help you delve deeper into the Bible's message and apply it to your daily life.",
+    link: "/bible_verses_section"
   },
   {
     id: 2,
-    title: "Versiculos favoritos",
-    description: "Encuentra tus versículos favoritos y sigue aprendiendo de la palabra de Dios.",
-    date: "2024-03-10",
+    title: "Favorite Verses",
+    description: "Find your favorite verses and keep learning from the word of God.",
+    views: 1200,
+    tags: ["CSS", "Frontend", "Tutorial"],
+    image: "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    content: "Explora una selección de tus versículos favoritos para inspirarte y seguir aprendiendo de la palabra de Dios. Esta sección está diseñada para fortalecer tu fe, brindarte esperanza y guiarte en tu crecimiento espiritual, ayudándote a aplicar los mensajes bíblicos en tu vida diaria.",
+    link: "/favorite_verses"
+  },
+  {
+    id: 2,
+    title: "Repasa tus versiculos",
+    description: "Repasa tus versiculos favoritos y sigue aprendiendo de la palabra de Dios.",
     views: 1200,
     tags: ["css", "frontend", "tutorial"],
     image: "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    content: "Explora una selección de tus versículos favoritos para inspirarte y seguir aprendiendo de la palabra de Dios. Esta sección está diseñada para fortalecer tu fe, brindarte esperanza y guiarte en tu crecimiento espiritual, ayudándote a aplicar los mensajes bíblicos en tu vida diaria."
+    content: "Explora una selección de tus versículos favoritos para inspirarte y seguir aprendiendo de la palabra de Dios. Esta sección está diseñada para fortalecer tu fe, brindarte esperanza y guiarte en tu crecimiento espiritual, ayudándote a aplicar los mensajes bíblicos en tu vida diaria.",
+    link: "/review_your_verses"
+
   },
 
 ];
 
 export const getPosts = (): Promise<Post[]> => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(posts);
-    }, 500);
-  });
+  return Promise.resolve(posts);
 };
 
 export const getPostById = (id: number): Promise<Post | undefined> => {
+  const post = posts.find(p => p.id === id);
+  return Promise.resolve(post);
+};
+
+export const getEdutainment = (): Promise<Edutainment[]> => {
   return new Promise((resolve) => {
-    setTimeout(() => {
-      const post = posts.find(p => p.id === id);
-      resolve(post);
-    }, 500);
+    resolve(Edutainment);
   });
 };

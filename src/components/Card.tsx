@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import type { BlogPostProps } from '../config/type';
 
-const Card: React.FC<BlogPostProps> = ({ id, title, description, tags, date, image }) => {
+const Card: React.FC<BlogPostProps> = ({ id, title, description, tags, date, image, link }) => {
   console.log({ id, title, description, tags, date, image });
   return (
     <article className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow overflow-hidden transition-transform transform hover:scale-105">
-      <Link to={`/post/${id}`}>
+      <Link to={link}>
         <img src={image} alt={title} className="w-full h-48 object-cover" />
         <div className="p-6">
           <h2 className="text-xl font-bold mb-2 text-[#004694]">{title}</h2>
@@ -17,9 +17,9 @@ const Card: React.FC<BlogPostProps> = ({ id, title, description, tags, date, ima
               ))}
           </div>
           <div className="flex justify-between items-center">
-            <span className="text-xs text-gray-500">{date}</span>
+            {date ? <span className="text-xs text-gray-500">{date}</span>: <span className="text-xs text-gray-500"></span>}
             <Link
-              to={`/post/${id}`}
+              to={link}
               className="bg-[#004694] text-white px-3 py-1 text-sm rounded-md hover:bg-[#003674] transition-colors"
             >
               Leer más
