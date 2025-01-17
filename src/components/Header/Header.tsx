@@ -1,5 +1,6 @@
+// src/components/Header/index.tsx
 import { Link } from 'react-router-dom';
-import image from "../../public/image/logo4.png";
+import image from "../../../public/image/logo4.png";
 
 const Header = () => {
   return (

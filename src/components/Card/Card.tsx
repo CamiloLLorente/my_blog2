@@ -1,6 +1,7 @@
+// src/components/Card/index.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import type { BlogPostProps } from '../config/type';
+import type { BlogPostProps } from '../../config/type';
 
 const Card: React.FC<BlogPostProps> = ({ id, title, description, tags, date, image, link }) => {
   console.log({ id, title, description, tags, date, image });
