@@ -1,25 +1,18 @@
-import  { useState, useEffect } from 'react';
+import { ArrowRightCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Card from '../components/Card';
-import {ArrowRightCircle} from 'lucide-react';
-import { getPosts, Post, getEdutainment, Edutainment } from '../data/posts';
 import image from "../../public/image/jesus.png";
 import image2 from "../../public/image/pexels-photo-64779.webp";
+import Card from '../components/Card';
+import { useEdutainment } from '../hook/edutainment';
+import { usePosts } from '../hook/post';
 
 const Home = (): JSX.Element => {
-  const [recentPosts, setRecentPosts] = useState<Post[]>([]);
-  const [edutainment, setEdutainment] = useState<Edutainment[]>([]);
-
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const fetchedPosts = await getPosts();
-      const fetchedEdutainment = await getEdutainment();
-      setEdutainment(fetchedEdutainment.slice(0, 3));
-      setRecentPosts(fetchedPosts.slice(0, 3));
-    };
-    fetchPosts();
-  }, []);
-
+ 
+  const {posts} = usePosts();
+  const {edutainmentFilter} = useEdutainment();
+  const recentPosts = posts.slice(0, 3);
+  const edutainment = edutainmentFilter.slice(0, 3);
+ 
 
   return (
     <div>

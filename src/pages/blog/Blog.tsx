@@ -1,20 +1,11 @@
-import { useState, useEffect } from 'react';
-import Search from '../../components/Search';
 import BlogPost from '../../components/Card';
-import { getPosts, Post } from '../../data/posts';
+import Search from '../../components/Search';
+import { usePosts } from '../../hook/post';
+
 
 const Blog = () => {
-  const [posts, setPosts] = useState<Post[]>([]);
-  const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const fetchedPosts = await getPosts();
-      setPosts(fetchedPosts);
-      setFilteredPosts(fetchedPosts);
-    };
-    fetchPosts();
-  }, []);
+  const { posts, filteredPosts, setFilteredPosts } = usePosts();
 
   const handleSearch = (query: string) => {
     const filtered = posts.filter(

@@ -1,14 +1,13 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
+import Header from './components/Header';
+import { About } from './pages/About';
+import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Blog from './pages/blog/Blog';
-import Contact from './pages/Contact';
 import PostView from './pages/blog/PostView';
-import { About } from './pages/About';
-import DiscoverAndLearn from './pages/edutainment/DiscoverAndLearn';
 import BibleVersesSection from './pages/edutainment/BibleVersesSection';
+import DiscoverAndLearn from './pages/edutainment/DiscoverAndLearn';
 import FavoriteVerses from './pages/edutainment/FavoriteVerses';
 import ReviewYourVerses from './pages/edutainment/ReviewYourVerses';
 
