@@ -1,26 +1,6 @@
-export interface Post {
-  id: number;
-  title: string;
-  description: string;
-  date: string;
-  views: number;
-  tags: string[];
-  image: string;
-  content: string;
-}
+import { Post, Edutainment } from './interfaces';
 
-export interface Edutainment {
-  id: number;
-  title: string;
-  description: string;
-  views: number;
-  tags: string[];
-  image: string;
-  content: string;
-  link: string;
-}
-
-const posts: Post[] = [
+export const posts: Post[] = [
   {
     id: 1,
     title: "Introducción a React",
@@ -73,7 +53,7 @@ const posts: Post[] = [
   }
 ];
 
-const Edutainment: Edutainment[] = [
+const edutainment: Edutainment[] = [
   {
     id: 1,
     title: "Bible Verses Section",
@@ -108,17 +88,8 @@ const Edutainment: Edutainment[] = [
 
 ];
 
-export const getPosts = (): Promise<Post[]> => {
-  return Promise.resolve(posts);
-};
-
-export const getPostById = (id: number): Promise<Post | undefined> => {
-  const post = posts.find(p => p.id === id);
-  return Promise.resolve(post);
-};
-
 export const getEdutainment = (): Promise<Edutainment[]> => {
   return new Promise((resolve) => {
-    resolve(Edutainment);
+    resolve(edutainment);
   });
 };

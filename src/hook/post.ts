@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { fetchPosts } from '../services/blogService';
-import { Post } from '../data/posts';
+import { Post } from '../data/interfaces';
 
 export const usePosts = () => {
   const [posts, setPosts] = useState<Post[]>([]);

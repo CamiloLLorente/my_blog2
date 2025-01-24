@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { getPostById, Post } from '../../data/posts';
+import { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { getPostById } from '../../services/blogService';
+import { Post } from '../../data/interfaces';
 
 const PostView = () => {
   const { id } = useParams<{ id: string }>();

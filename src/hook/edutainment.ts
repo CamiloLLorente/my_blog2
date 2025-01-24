@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { getEdutainment, Edutainment } from '../data/posts';
+import { getEdutainment } from '../data/data';
+import { Edutainment } from '../data/interfaces';
 
 export const useEdutainment = () => {
   const [edutainmentFilter, setEdutainmentFilter] = useState<Edutainment[]>([]);
