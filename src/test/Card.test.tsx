@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import Card from './Card';
+import Card from '../components/Card/Card';
 
 describe('Card', () => {
     const title = 'title';
@@ -55,6 +55,6 @@ describe('Card', () => {
         );
         const imageElement = screen.getByRole('img',{ name: /titulo2/i} ); // Busca una imagen por su rol.
         console.log(imageElement);
-        expect(imageElement).toHaveAttribute('src', './public/default-image-path.png'); // Verifica que utilice la imagen por defecto.
+        expect(imageElement).toHaveAttribute('src', '/public/image/default-image-path.jpg'); // Verifica que utilice la imagen por defecto.
     });
 });

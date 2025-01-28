@@ -11,7 +11,7 @@ const Card: React.FC<BlogPostProps> = ({ id, title, description, tags, date, ima
       to={link}
       className="block bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow transform hover:scale-105"
     >
-      <img src={image?.length ? image : defaultImage} alt={image?.length ? title: "default-image-path"} className="w-full h-48 object-cover" />
+      <img src={image?.length ? image : defaultImage} alt={title} className="w-full h-48 object-cover" />
       
       <div className="p-6">
       <h2 className="text-xl font-bold mb-2 text-[#004694]">{title}</h2>
