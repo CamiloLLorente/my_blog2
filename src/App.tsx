@@ -13,7 +13,7 @@ import ReviewYourVerses from './pages/edutainment/ReviewYourVerses';
 
 function App() {
   return (
-    <Router>
+    <Router future={{ v7_startTransition: true }}>
       <div className="flex flex-col min-h-screen bg-[#f5f5f5]">
         <Header />
         <main className="flex-grow ">
