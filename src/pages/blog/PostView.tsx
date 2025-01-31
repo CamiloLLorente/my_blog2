@@ -1,26 +1,21 @@
-import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { getPostById } from '../../services/blogService';
-import { Post } from '../../data/interfaces';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import { usePostView } from '../../hook/post';
+import NotFound from '../NotFound';
 
 const PostView = () => {
-  const { id } = useParams<{ id: string }>();
-  const [post, setPost] = useState<Post | null>(null);
+  const { id } = useParams<{ id?: string }>(); // Hacemos que id sea opcional
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    const fetchPost = async () => {
-      if (id) {
-        const fetchedPost = await getPostById(parseInt(id, 10));
-        if (fetchedPost) {
-          setPost(fetchedPost);
-        }
-      }
-    };
-    fetchPost();
-  }, [id]);
+  
+  if (!id) {
+    navigate("/404_no_found"); // Redirige sin recargar la página
+  }
+ 
+
+  const { post } = usePostView(id || ""); // Usamos `||` en lugar de `??` para simplificar
 
   if (!post) {
-    return <div>Cargando...</div>;
+    return <NotFound />;
   }
 
   return (

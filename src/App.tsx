@@ -1,4 +1,4 @@
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import { About } from './pages/About';
@@ -10,6 +10,7 @@ import BibleVersesSection from './pages/edutainment/BibleVersesSection';
 import DiscoverAndLearn from './pages/edutainment/DiscoverAndLearn';
 import FavoriteVerses from './pages/edutainment/FavoriteVerses';
 import ReviewYourVerses from './pages/edutainment/ReviewYourVerses';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
             <Route path="/bible_verses_section" element={<BibleVersesSection />} />
             <Route path="/favorite_verses" element={<FavoriteVerses />} />
             <Route path="/review_your_verses" element={<ReviewYourVerses />} />
+            <Route path='/404_no_found' element={<NotFound />} />
+            <Route path="*" element={<Navigate to="/404_no_found" replace />} />
           </Routes>
         </main>
         <Footer />

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { fetchPosts } from '../services/blogService';
+import { fetchPosts, getPostById } from '../services/blogService';
 import { Post } from '../data/interfaces';
 
 export const usePosts = () => {
@@ -17,3 +17,23 @@ export const usePosts = () => {
 
   return { posts, filteredPosts, setFilteredPosts };
 };
+
+
+export const usePostView = (id:string) => {
+
+  const [post, setPost] = useState<Post | null>(null);
+
+  useEffect(() => {
+    const fetchPost = async () => {
+      if (id) {
+        const fetchedPost = await getPostById(parseInt(id, 10));
+        if (fetchedPost) {
+          setPost(fetchedPost);
+        }
+      }
+    };
+    fetchPost();
+  }, [id]);
+
+  return { post };
+}
