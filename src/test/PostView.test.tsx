@@ -8,6 +8,7 @@ import NotFound from "../pages/NotFound";
 
 describe("PostView", () => {
   beforeEach(() => {
+    vi.clearAllMocks();
       render(
           <BrowserRouter>
               <PostView />
