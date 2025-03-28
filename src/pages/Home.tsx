@@ -1,7 +1,7 @@
 import { ArrowRightCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import image from "../../public/image/jesus.png";
-import image2 from "../../public/image/pexels-photo-64779.webp";
+import image2 from "../../public/image/fondo2.jpeg";
 import Card from '../components/Card';
 import { useEdutainment } from '../hook/edutainment';
 import { usePosts } from '../hook/post';
@@ -16,14 +16,13 @@ const Home = (): JSX.Element => {
 
   return (
     <div>
-      <div className="relative">
-        <img
-          src={image2}
-          alt="Hero image"
-          className="w-full h-[85vh] object-cover "
-        />
+      <div
+        className="relative h-[100vh] bg-cover bg-center"
+        style={{ backgroundImage: `url(${image2})` }}
+      >
+        
       
-        <div className="absolute container mx-auto inset-0 flex flex-col items-start justify-start px-5 py-20 text-center text-white">
+        <div className="absolute container mx-auto inset-0 flex flex-col items-center justify-start px-5 py-20 text-center text-white">
           <div className=''>
             <img
               src={image}
