@@ -3,7 +3,6 @@ import { useEdutainment } from '../../hook/edutainment';
 
 const DiscoverAndLearn = () => {
   const { edutainmentFilter } = useEdutainment();
-
   return (
     <div className="container mx-auto px-4 py-20">
       <h1 className="text-3xl font-bold text-[#004694] mb-8 ">Aprende y Diviertete</h1>
@@ -16,7 +15,7 @@ const DiscoverAndLearn = () => {
             description={post.description}
             tags={post.tags}
             image={post.image}
-            link={`/blog/${post.id}`}
+            link={post.link}
           />
         ))}
       </div>
