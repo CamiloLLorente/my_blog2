@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+.cardSection {
+    position: relative;
+    width: 300px;
+    height: 420px;
+    background: #fff;
+    margin: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    transition: 0.5s;
+}
+
+
+.cardSection:hover {
+    filter: blur(0px);
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.cardSection .circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(180px at center 0);
+    text-align: center;
+}
+
+.cardSection .circle h2 {
+    color: #fff;
+    font-size: 1.5em;
+    padding: 30px 0;
+}
+
+.cardSection .content {
+    position: absolute;
+    bottom: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cardSection .content p {
+    color: #666;
+}
+
+.cardSection .content a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    border-radius: 40px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+/* .cardSection:nth-child(1) .circle,
+.cardSection:nth-child(1) .content a {
+    background: #ffaf00;
+}
+
+.cardSection:nth-child(2) .circle,
+.cardSection:nth-child(2) .content a {
+    background: #da2268;
+}
+
+.cardSection:nth-child(3) .circle,
+.cardSection:nth-child(3) .content a {
+    background: #bb02ff;
+} */

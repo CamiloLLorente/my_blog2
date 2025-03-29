@@ -1,3 +1,5 @@
+import './SectionCard.css';
+
 
 interface SectionCardProps {
     title: string;
@@ -8,15 +10,16 @@ interface SectionCardProps {
 const SectionCard: React.FC<SectionCardProps> = ({ title, description, color }) => {
 
     return (
-        <div className={`max-w-sm rounded-lg shadow-lg overflow-hidden ${color} text-white`}>
-            <div className="px-4 py-2 bg-black bg-opacity-20 text-sm font-semibold">Header</div>
-            <div className="p-4">
-                <h2 className="text-xl font-bold">{title}</h2>
-                <p className="mt-2">{description}</p>
+        <div className="cardSection">
+            <div className="circle" style={{ backgroundColor: color }}>
+                <h2>{title}</h2>
             </div>
+            <div className="content">
+                <p>{description}</p>
+                <a href="#" style={{background:color}}>Read More</a>
+             </div>
         </div>
     );
-
 }
 export default SectionCard;
 
