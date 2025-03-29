@@ -6,37 +6,37 @@ const BibleVersesSection = () => {
       title: "Bible Verses Section",
       description:
         "Find inspiring verses to reflect on, strengthen your faith, and guide your spiritual life.",
-      color: "bg-[#004694]",
+      color: "#ffaf00",
     },
     {
       title: "Favorite Verses",
       description:
         "Find your favorite verses and keep learning from the word of God.",
-      color: "bg-[#FFA400]",
+      color: "#bb02ff",
     },
     {
       title: "Repasa tus versiculos",
       description:
         "Repasa tus versiculos favoritos y sigue aprendiendo de la palabra de Dios.",
-      color: "bg-[#FFD700]",
+      color: "#da2268",
     },
     {
       title: "Bible Verses Section",
       description:
         "Find inspiring verses to reflect on, strengthen your faith, and guide your spiritual life.",
-      color: "bg-[#004694]",
+      color: "#ffaf00",
     },
     {
       title: "Favorite Verses",
       description:
         "Find your favorite verses and keep learning from the word of God.",
-      color: "bg-[#FFA400]",
+      color: "#bb02ff",
     },
     {
       title: "Repasa tus versiculos",
       description:
         "Repasa tus versiculos favoritos y sigue aprendiendo de la palabra de Dios.",
-      color: "bg-[#FFD700]",
+      color: "#da2268",
     },
   ];
   return (
