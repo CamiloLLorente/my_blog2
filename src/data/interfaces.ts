@@ -19,3 +19,9 @@ export interface Edutainment {
   content: string;
   link: string;
 }
+export interface SectionVerses {
+  title: string;
+  description: string;
+  color: string;
+  slug: string;
+}

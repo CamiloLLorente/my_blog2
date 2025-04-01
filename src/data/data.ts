@@ -1,4 +1,4 @@
-import { Post, Edutainment } from './interfaces';
+import { Post, Edutainment, SectionVerses } from './interfaces';
 
 export const posts: Post[] = [
   {
@@ -86,6 +86,51 @@ const edutainment: Edutainment[] = [
 
   },
 
+];
+
+export const sectionsVerses :SectionVerses[] = [
+  {
+    title: "Justificación",
+    description:
+      "Justificación por la fe y la gracia de Dios.",
+    color: "#ffaf00",
+    slug: "justificacion"
+  },
+  {
+    title: "Nuevo Nacimiento",
+    description:
+      "Nuevo nacimiento y transformación espiritual.",
+    color: "#bb02ff",
+    slug: "nuevo_nacimiento"
+  },
+  {
+    title: "Repasa tus versiculos",
+    description:
+      "Repasa tus versiculos favoritos y sigue aprendiendo de la palabra de Dios.",
+    color: "#da2268",
+  },
+  {
+    title: "Arrepntimiento",
+    description:
+      "Find inspiring verses to reflect on, strengthen your faith, and guide your spiritual life.",
+    color: "#ffaf00",
+    slug: "arrepentimiento"
+  },
+  {
+    title: "Conversión",
+    description:
+      "Find your favorite verses and keep learning from the word of God.",
+    color: "#bb02ff",
+    slug: "conversion"
+  },
+  {
+    title: "Unicidad",
+    description:
+      "Repasa tus versiculos favoritos y sigue aprendiendo de la palabra de Dios.",
+    color: "#da2268",
+    slug: "unicidad"
+
+  },
 ];
 
 export const getEdutainment = (): Promise<Edutainment[]> => {
