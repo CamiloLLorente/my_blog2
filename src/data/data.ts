@@ -1,4 +1,4 @@
-import { Post, Edutainment, SectionVerses } from './interfaces';
+import { Edutainment, Post, SectionVerses, Verses } from './interfaces';
 
 export const posts: Post[] = [
   {
@@ -108,6 +108,7 @@ export const sectionsVerses :SectionVerses[] = [
     description:
       "Repasa tus versiculos favoritos y sigue aprendiendo de la palabra de Dios.",
     color: "#da2268",
+    slug: "repasa_tus_versiculos"
   },
   {
     title: "Arrepntimiento",
@@ -132,6 +133,72 @@ export const sectionsVerses :SectionVerses[] = [
 
   },
 ];
+
+
+
+
+export const verses: Verses = {
+  "justificacion": [
+    {
+      id: 1,
+      title: "Romanos 5:1",
+      description: "Justificados, pues, por la fe, tenemos paz para con Dios por medio de nuestro Señor Jesucristo.",
+    },
+    {
+      id: 2,
+      title: "Efesios 2:8-9",
+      description: "Porque por gracia sois salvos por medio de la fe; y esto no de vosotros, pues es don de Dios; no por obras, para que nadie se gloríe.",
+    },
+  ],
+  "nuevo_nacimiento": [
+    {
+      id: 1,
+      title: "Juan 3:3",
+      description: "De cierto, de cierto te digo que el que no naciere de nuevo, no puede ver el reino de Dios.",
+    },
+    {
+      id: 2,
+      title: "2 Corintios 5:17",
+      description: "De modo que si alguno está en Cristo, nueva criatura es; las cosas viejas pasaron; he aquí todas son hechas nuevas.",
+    },
+  ],
+  "repasa_tus_versiculos": [
+    {
+      id: 1,
+      title: "Salmos 119:11",
+      description: "En mi corazón he guardado tus dichos, para no pecar contra ti.",
+    },
+    {
+      id: 2,
+      title: "Salmos 119:105",
+      description: "Lámpara es a mis pies tu palabra, y lumbrera a mi camino.",
+    },
+  ],
+  "arrepentimiento": [
+    {
+      id: 1,
+      title: "Hechos 3:19",
+      description: "Así que, arrepentíos y convertíos, para que sean borrados vuestros pecados, para que vengan de la presencia del Señor tiempos de refrigerio.",
+    },
+    {
+      id: 2,
+      title: "2 Crónicas 7:14",
+      description: "Si se humillare mi pueblo, sobre el cual es invocado mi nombre, y oraren y buscaren mi rostro, y se convirtieren de sus malos caminos; entonces yo oiré desde los cielos, y perdonaré sus pecados, y sanaré su tierra.",
+    },
+  ],
+  "conversion": [
+    {
+      id: 1,
+      title: "Romanos 10:9-10",
+      description: "Que si confesares con tu boca que Jesús es el Señor, y creyeres en tu corazón que Dios le levantó de los muertos, serás salvo. Porque con el corazón se cree para justicia, pero con la boca se confiesa para salvación.",
+    },
+    {
+      id: 2,
+      title: "Hechos 2:38",
+      description: "Pedro les dijo: Arrepentíos, y bautícese cada uno de vosotros en el nombre de Jesucristo para perdón de los pecados; y recibiréis el don del Espíritu Santo.",
+    },
+  ],
+};
 
 export const getEdutainment = (): Promise<Edutainment[]> => {
   return new Promise((resolve) => {

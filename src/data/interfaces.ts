@@ -25,3 +25,12 @@ export interface SectionVerses {
   color: string;
   slug: string;
 }
+export interface Verse {
+  id: number;
+  title: string;
+  description: string;
+}
+
+export interface Verses {
+  [key: string]: Verse[];
+}
