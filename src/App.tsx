@@ -11,6 +11,7 @@ import DiscoverAndLearn from './pages/edutainment/DiscoverAndLearn';
 import FavoriteVerses from './pages/edutainment/FavoriteVerses';
 import ReviewYourVerses from './pages/edutainment/ReviewYourVerses';
 import NotFound from './pages/NotFound';
+import VerseSection from './pages/edutainment/VerseSection';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/bible_verses_section" element={<BibleVersesSection />} />
             <Route path="/favorite_verses" element={<FavoriteVerses />} />
             <Route path="/review_your_verses" element={<ReviewYourVerses />} />
+            <Route path="/versiculo/seccion/:name" element={<VerseSection />} />
             <Route path='/404_no_found' element={<NotFound />} />
             <Route path="*" element={<Navigate to="/404_no_found" replace />} />
           </Routes>
