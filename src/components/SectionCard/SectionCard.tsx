@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './SectionCard.css';
 
 
@@ -5,12 +6,14 @@ interface SectionCardProps {
     title: string;
     description: string;
     color: string;
+    url: string
+    slug: string;
 }
 
-const SectionCard: React.FC<SectionCardProps> = ({ title, description, color }) => {
+const SectionCard: React.FC<SectionCardProps> = ({ title, description, color, url }) => {
 
     return (
-        <div className="cardSection">
+        <Link to={url} className="cardSection">
             <div className="circle" style={{ backgroundColor: color }}>
                 <h2>{title}</h2>
             </div>
@@ -18,7 +21,7 @@ const SectionCard: React.FC<SectionCardProps> = ({ title, description, color }) 
                 <p>{description}</p>
                 <a href="#" style={{background:color}}>Read More</a>
              </div>
-        </div>
+        </Link>
     );
 }
 export default SectionCard;
