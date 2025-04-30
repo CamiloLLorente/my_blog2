@@ -28,6 +28,7 @@ export interface SectionVerses {
 export interface Verse {
   id: number;
   title: string;
+  favorite: boolean;
   description: string;
 }
 
