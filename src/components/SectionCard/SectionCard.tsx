@@ -13,7 +13,7 @@ interface SectionCardProps {
 const SectionCard: React.FC<SectionCardProps> = ({ title, description, color, url }) => {
 
     return (
-        <Link to={url} className="cardSection">
+        <Link to={url} className="card">
             <div className="circle" style={{ backgroundColor: color }}>
                 <h2>{title}</h2>
             </div>

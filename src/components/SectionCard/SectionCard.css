@@ -1,7 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
 
-.cardSection {
+
+
+/* .container_section_card {
+    position: relative;
+    width: 1150px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+} */
+.card {
     position: relative;
     width: 300px;
     height: 420px;
@@ -14,39 +32,37 @@
 }
 
 
-.cardSection:hover {
-    filter: blur(0px);
-    transform: scale(1.1);
-    opacity: 1;
-}
 
-.cardSection .circle {
+
+
+.card .circle {
     position: relative;
     width: 100%;
     height: 100%;
+    background: #000;
     clip-path: circle(180px at center 0);
     text-align: center;
 }
 
-.cardSection .circle h2 {
+.card .circle h2 {
     color: #fff;
     font-size: 1.5em;
     padding: 30px 0;
 }
 
-.cardSection .content {
+.container .card .content {
     position: absolute;
     bottom: 10px;
     padding: 20px;
-    margin-bottom: 20px;
+    page-break-after: 20px;
     text-align: center;
 }
 
-.cardSection .content p {
+.container .card .content p {
     color: #666;
 }
 
-.cardSection .content a {
+.container .card .content a {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
@@ -57,17 +73,17 @@
     margin-top: 20px;
 }
 
-/* .cardSection:nth-child(1) .circle,
-.cardSection:nth-child(1) .content a {
+.container .card:nth-child(1) .circle,
+.container .card:nth-child(1) .content a {
     background: #ffaf00;
 }
 
-.cardSection:nth-child(2) .circle,
-.cardSection:nth-child(2) .content a {
+.container .card:nth-child(2) .circle,
+.container .card:nth-child(2) .content a {
     background: #da2268;
 }
 
-.cardSection:nth-child(3) .circle,
-.cardSection:nth-child(3) .content a {
+.container .card:nth-child(3) .circle,
+.container .card:nth-child(3) .content a {
     background: #bb02ff;
-} */
+}
