@@ -14,7 +14,7 @@ interface CardFavoriteProps {
 const CardFavorite: React.FC<CardFavoriteProps> = ({ id, title, description, favorite, slug, onFavoriteUpdate }) => {
 
     const handleFavoriteClick = async () => {
-        await setFavorite(slug, id, !favorite);
+        await setFavorite(slug, id, !favorite, title, description);
         onFavoriteUpdate(); // Notificar al componente padre
     };
 
