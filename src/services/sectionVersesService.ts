@@ -22,8 +22,8 @@ export const getVerseByName = async (slug: string): Promise<Verse[] | undefined>
     return verse;
 };
 
-export const setFavorite = (slug: string, id: number,favorite: boolean, title:string,description:string) => {
-    const storedVerse = localStorage.getItem(`verse_${slug}`);
+export const setFavorite = async (slug: string, id: number,favorite: boolean, title:string,description:string) => {
+    const storedVerse =  localStorage.getItem(`verse_${slug}`);
     
     const storedFavorite = localStorage.getItem(`favorite`);
     if (storedVerse) {
@@ -35,6 +35,7 @@ export const setFavorite = (slug: string, id: number,favorite: boolean, title:st
         }
     }
     if (storedFavorite) {
+        console.log(slug, id, favorite, title, description);
         const favorites = JSON.parse(storedFavorite) as FavoriteList;
         if (!favorites[slug]) {
             favorites[slug] = [];
@@ -44,19 +45,21 @@ export const setFavorite = (slug: string, id: number,favorite: boolean, title:st
 
         if (favorite && index === -1) {
             const newFavorite = { id, title, description, favorite };
-            console.log("newFavorite",newFavorite);
             favorites[slug].push(newFavorite);
-            console.log("favorites",favorites);
             
         } else if (!favorite && index !== -1) {
             favorites[slug].splice(index, 1);
+            if (favorites[slug].length === 0) {
+                delete favorites[slug];
+            }
         }
-        console.log("favorite",favorites);
+
+        console.log(favorites);
         localStorage.setItem(`favorite`, JSON.stringify(favorites));
-       
     }else {
         const favorites: FavoriteList = {
-            [slug]: [{ id }]
+            [slug]: [{ id, title, description, favorite }],
+            
         };
         localStorage.setItem(`favorite`, JSON.stringify(favorites));
     }
