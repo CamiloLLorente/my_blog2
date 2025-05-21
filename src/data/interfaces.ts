@@ -35,3 +35,6 @@ export interface Verse {
 export interface Verses {
   [key: string]: Verse[];
 }
+export interface FavoriteList {
+   [category: string]: Verse[];
+}

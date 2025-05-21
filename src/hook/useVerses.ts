@@ -17,10 +17,10 @@ const useVerses = (name?: string) => {
   }, [name]);
 
   const toggleFavorite = useCallback(
-    async (id: number, favorite: boolean) => {
+    async (id: number, favorite: boolean,title:string,description:string) => {
       if (!name) return;
       try {
-        await setFavorite(name, id, !favorite);
+        await setFavorite(name, id, !favorite, title,description);
         setRefresh((prev) => !prev); // Forzar actualización
       } catch (error) {
         console.error("Error updating favorite:", error);
