@@ -16,29 +16,22 @@ const Home = (): JSX.Element => {
 
   return (
     <div>
-      <div
-        className="relative h-[100vh] bg-cover bg-center"
-        style={{ backgroundImage: `url(${image2})` }}
-      >
-        
-      
-        <div className="absolute container mx-auto inset-0 flex flex-col items-center justify-start px-5 py-20 text-center text-white">
-          <div className=''>
-            <img
-              src={image}
-              alt="Hero image"
-              className="w-200 h-[200px] object-cover "
-            />
-        
-          </div>
-          <h1 className="text-white text-7xl font-bold  mb-2">
-            El camino, la verdad y la vida.
+     
+      <section className="bg-[#004694]  text-white">
+        <div className="container mx-auto px-6 pt-40 pb-20 text-center">
+          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+            Bienvenido a tu Espacio de Fe
           </h1>
-          <h2 className="text-[#FFA400] text-4xl font-bold">
-            Un viaje de fe y descubrimiento
-          </h2>
+          <p className="mt-4 text-lg md:text-xl text-blue-200 max-w-3xl mx-auto">
+            Un lugar para crecer y reflexionar. Genera un tema de estudio bíblico ¡y profundiza en tu camino espiritual!
+          </p>
+          <button
+            className="bg-[#FFA400] mt-8 inline-flex items-center justify-center bg-brand-orange hover:bg-brand-orange-dark text-white font-bold py-3 px-8 rounded-full "
+          >
+            Generar Idea de Proyecto
+          </button>
         </div>
-      </div>
+      </section>
 
       <section className="bg-[#f2f2f2]  py-[100px]">
         <div className="container mx-auto px-6 ">

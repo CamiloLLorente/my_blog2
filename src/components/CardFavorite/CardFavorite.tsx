@@ -19,7 +19,7 @@ const CardFavorite: React.FC<CardFavoriteProps> = ({ id, title, description, fav
     };
 
     return (
-        <div className="relative w-[500px] p-4 bg-white rounded-2xl shadow-lg border">
+        <div className="relative w-full max-w-[500px] p-4 bg-white rounded-2xl shadow-lg border">
           <button
             onClick={handleFavoriteClick}
             className="absolute top-2 right-2 text-gray-500 hover:text-red-500 transition"

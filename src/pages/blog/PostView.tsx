@@ -24,7 +24,7 @@ const PostView = () => {
       <h1 className="text-4xl font-bold text-[#004694] mb-4">{post.title}</h1>
       <p className="text-gray-600 mb-8">{post.date}</p>
       <div className="prose max-w-none mb-8">
-        <p>{post.content}</p>
+        <div dangerouslySetInnerHTML={{ __html: post.content }} />
       </div>
       <Link
         to="/blog"

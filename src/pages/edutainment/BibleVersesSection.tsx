@@ -17,7 +17,7 @@ const BibleVersesSection = () => {
     fetchSections();
   })
   return (
-    <div className="container mx-auto px-4 py-20">
+    <div className="container mx-auto px-4 py-10">
       <h1 className="text-3xl font-bold text-[#004694] mb-8">
         Seccion de versiculos biblicos
       </h1>
@@ -26,7 +26,7 @@ const BibleVersesSection = () => {
         your spiritual life.
       </p>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 justify-center justify-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 mt-8 justify-center justify-items-center">
         {sections.map((section, index) => (
           <SectionCard
             key={index}

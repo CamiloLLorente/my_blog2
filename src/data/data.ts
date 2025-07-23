@@ -3,13 +3,67 @@ import { Edutainment, Post, SectionVerses, Verses } from './interfaces';
 export const posts: Post[] = [
   {
     id: 1,
-    title: "Introducción a React",
+    title: "Arrrepentimiento",
     description: "Aprende los conceptos básicos de React y cómo crear tu primera aplicación.",
     date: "2024-03-15",
     views: 1500,
     tags: ["react", "frontend", "tutorial"],
-    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    content: "React es una biblioteca de JavaScript para construir interfaces de usuario. Fue desarrollada por Facebook y se ha convertido en una de las herramientas más populares para el desarrollo web frontend. En este artículo, exploraremos los conceptos básicos de React y cómo puedes comenzar a crear tu primera aplicación..."
+    image: "/image/arrepentimiento2.jpg",
+    content: `
+    <article style="
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #fdfdfd;
+      border-radius: 12px;
+      font-family: 'Georgia', serif;
+      color: #333;
+      line-height: 1.8;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    ">
+
+      <p><strong>El arrepentimiento</strong> no es un concepto superficial, sino un mandato divino y una condición indispensable para la salvación y la entrada en el Reino de Dios. Jesús mismo inició su ministerio predicando este mensaje central: <strong>"arrepentíos, y creed en el evangelio"</strong>. No es una sugerencia, sino una orden directa de Dios a <em>"todos los hombres en todo lugar"</em>, un requisito que el Rey del cielo tiene el legítimo derecho de exigir.</p>
+
+      <h2 style="margin-top: 30px; color: #2c5282;">1. ¿Por Qué Debemos Arrepentirnos? La Profunda Gravedad del Pecado</h2>
+      <p>Las fuentes nos revelan que el arrepentimiento es crucial debido a la naturaleza intrínsecamente grave del pecado, que es la <strong>"clave de todos nuestros problemas"</strong>:</p>
+      <ul style="padding-left: 20px; list-style: disc;">
+        <li><strong>Es una Declaración de Guerra contra Dios:</strong> El pecado es una rebelión abierta contra el Creador. Desde Adán y Eva, la humanidad ha manifestado esta "misma rebeldía contra Dios".</li>
+        <li><strong>Nos Enemista con Dios:</strong> El pecado implica enemistad, desprecio o indiferencia hacia Dios. <em>"El que no es conmigo, contra mí es"</em>.</li>
+        <li><strong>Atenta contra la Justicia de Dios:</strong> Dios es justo y aborrece la injusticia. El pecado es una infracción de Su ley y crea una barrera insuperable entre Él y nosotros (Isaías 59:2, Apocalipsis 21:27).</li>
+      </ul>
+
+      <h2 style="margin-top: 30px; color: #2c5282;">2. ¿Qué es el Genuino Arrepentimiento? Una Transformación Integral</h2>
+      <p>La palabra griega <em>metanoeo</em> significa "cambio de mente". El verdadero arrepentimiento implica una transformación completa en:</p>
+      <ul style="padding-left: 20px; list-style: disc;">
+        <li><strong>1. El Intelecto (Cambio de Pensamiento):</strong> Reconocer la gravedad del pecado y la necesidad de Jesús como Señor (Romanos 10:8-9).</li>
+        <li><strong>2. Las Emociones (Cambio de Sentir):</strong> Sentir tristeza sincera por el pecado. Ejemplo: David en el Salmo 51.</li>
+        <li><strong>3. La Voluntad (Cambio de Vida):</strong> Abandonar la vida antigua. Ejemplo: Zaqueo devolviendo lo robado.</li>
+      </ul>
+
+      <h2 style="margin-top: 30px; color: #2c5282;">3. Lo que el Arrepentimiento NO Es</h2>
+      <ul style="padding-left: 20px; list-style: disc;">
+        <li>No es solo pasar al altar sin propósito de cambio.</li>
+        <li>No es lamentarse sin transformación (como Judas, Esaú o Saúl).</li>
+        <li>No son rituales sin conversión verdadera.</li>
+        <li>No es aparentar vida cristiana sin transformación interna.</li>
+        <li>No es postergar la decisión, como Faraón.</li>
+        <li>No es confiar en nuestras obras o creernos "buenas personas".</li>
+      </ul>
+
+      <h2 style="margin-top: 30px; color: #2c5282;">4. La Fuente del Genuino Arrepentimiento</h2>
+      <p>El arrepentimiento verdadero no nace del esfuerzo humano, sino que es una obra del Espíritu Santo mediante la Palabra de Dios (Juan 6:63). Es respuesta al llamado de Dios y a la revelación del amor de Jesús.</p>
+
+      <h2 style="margin-top: 30px; color: #2c5282;">5. Urgencia y Consecuencias del Arrepentimiento</h2>
+      <ul style="padding-left: 20px; list-style: disc;">
+        <li>Dios no quiere que nadie perezca, sino que todos procedan al arrepentimiento (2 Pedro 3:9).</li>
+        <li>La puerta de la gracia está abierta <strong>hoy</strong>, pero no para siempre.</li>
+        <li>No arrepentirse lleva a la condenación eterna (Lucas 13:3).</li>
+      </ul>
+
+      <p>El arrepentimiento es una decisión urgente y necesaria. Es el primer paso hacia el perdón, la paz con Dios y una vida nueva. Jesús dijo que hay <strong>"fiesta en el cielo por cada pecador que se arrepiente"</strong>.</p>
+    </article>
+    `
+
   },
   {
     id: 2,
@@ -88,51 +142,45 @@ const edutainment: Edutainment[] = [
 
 ];
 
-export const sectionsVerses :SectionVerses[] = [
+export const sectionsVerses: SectionVerses[] = [
   {
     title: "Justificación",
-    description:
-      "Justificación por la fe y la gracia de Dios.",
-    color: "#ffaf00",
-    slug: "justificacion"
+    description: "Justificación por la fe y la gracia de Dios.",
+    color: "yellow",
+    slug: "justificacion",
   },
   {
     title: "Nuevo Nacimiento",
-    description:
-      "Nuevo nacimiento y transformación espiritual.",
-    color: "#bb02ff",
-    slug: "nuevo_nacimiento"
+    description: "Nuevo nacimiento y transformación espiritual.",
+    color: "purple",
+    slug: "nuevo_nacimiento",
   },
   {
     title: "Repasa tus versiculos",
-    description:
-      "Repasa tus versiculos favoritos y sigue aprendiendo de la palabra de Dios.",
-    color: "#da2268",
-    slug: "repasa_tus_versiculos"
+    description: "Repasa tus versiculos favoritos y sigue aprendiendo de la palabra de Dios.",
+    color: "pink",
+    slug: "repasa_tus_versiculos",
   },
   {
     title: "Arrepntimiento",
-    description:
-      "Find inspiring verses to reflect on, strengthen your faith, and guide your spiritual life.",
-    color: "#ffaf00",
-    slug: "arrepentimiento"
+    description: "Find inspiring verses to reflect on, strengthen your faith, and guide your spiritual life.",
+    color: "green",
+    slug: "arrepentimiento",
   },
   {
     title: "Conversión",
-    description:
-      "Find your favorite verses and keep learning from the word of God.",
-    color: "#bb02ff",
-    slug: "conversion"
+    description: "Find your favorite verses and keep learning from the word of God.",
+    color: "blue",
+    slug: "conversion",
   },
   {
     title: "Unicidad",
-    description:
-      "Repasa tus versiculos favoritos y sigue aprendiendo de la palabra de Dios.",
-    color: "#da2268",
-    slug: "unicidad"
-
+    description: "Repasa tus versiculos favoritos y sigue aprendiendo de la palabra de Dios.",
+    color: "red",
+    slug: "unicidad",
   },
 ];
+
 
 
 
@@ -193,6 +241,18 @@ export const verses: Verses = {
       description: "Si se humillare mi pueblo, sobre el cual es invocado mi nombre, y oraren y buscaren mi rostro, y se convirtieren de sus malos caminos; entonces yo oiré desde los cielos, y perdonaré sus pecados, y sanaré su tierra.",
       favorite: false,
     },
+     {
+      id: 1,
+      title: "Hechos 3:19-11",
+      description: "Así que, arrepentíos y convertíos, para que sean borrados vuestros pecados, para que vengan de la presencia del Señor tiempos de refrigerio.",
+      favorite: false,
+    },
+    {
+      id: 2,
+      title: "2 Crónicas 7:144",
+      description: "Si se humillare mi pueblo, sobre el cual es invocado mi nombre, y oraren y buscaren mi rostro, y se convirtieren de sus malos caminos; entonces yo oiré desde los cielos, y perdonaré sus pecados, y sanaré su tierra.",
+      favorite: false,
+    }
   ],
   "conversion": [
     {
