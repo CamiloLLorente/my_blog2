@@ -11,7 +11,7 @@ const VerseSection = () => {
       <h1 className="text-3xl font-bold text-[#004694] mb-8">
         Seccion de versiculos biblicos
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 max-lg:grid-cols-2 lg:grid-cols-3 gap-[50px] justify-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[50px] justify-items-center">
 
         {verses.map((verse) => (
           <CardFavorite

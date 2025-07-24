@@ -41,7 +41,7 @@ const Home = (): JSX.Element => {
             Explora nuestros blogs más recientes y populares. Encuentra inspiración, conocimiento y descubre nuevas perspectivas en cada artículo.
             </p>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {recentPosts.map((post) => (
               <Card
                 key={post.id}
@@ -78,7 +78,7 @@ const Home = (): JSX.Element => {
           <h2 className="text-4xl font-bold text-center text-[#004694] mb-5"> Enriquese tus conocimientos</h2>
           <p className="text-center text-lg text-gray-500 mb-[80px] max-w-[800px] mx-auto">
             Explora nuestros blogs más recientes y populares. Encuentra inspiración, conocimiento y descubre nuevas perspectivas en cada artículo.</p>
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {edutainment.map((edutainment) => (
               <Card
                 key={edutainment.id}
