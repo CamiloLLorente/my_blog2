@@ -242,13 +242,13 @@ export const verses: Verses = {
       favorite: false,
     },
      {
-      id: 1,
+      id: 3,
       title: "Hechos 3:19-11",
       description: "Así que, arrepentíos y convertíos, para que sean borrados vuestros pecados, para que vengan de la presencia del Señor tiempos de refrigerio.",
       favorite: false,
     },
     {
-      id: 2,
+      id: 4,
       title: "2 Crónicas 7:144",
       description: "Si se humillare mi pueblo, sobre el cual es invocado mi nombre, y oraren y buscaren mi rostro, y se convirtieren de sus malos caminos; entonces yo oiré desde los cielos, y perdonaré sus pecados, y sanaré su tierra.",
       favorite: false,
