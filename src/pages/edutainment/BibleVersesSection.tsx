@@ -18,7 +18,7 @@ const BibleVersesSection = () => {
   })
   return (
     <div className="container mx-auto px-4 py-10">
-      <h1 className="text-3xl font-bold text-[#004694] mb-8">
+      <h1 className="text-3xl font-bold text-[#004694] mb-8 my-10">
         Seccion de versiculos biblicos
       </h1>
       <p>
