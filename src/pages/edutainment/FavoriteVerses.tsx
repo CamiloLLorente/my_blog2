@@ -6,8 +6,9 @@ const FavoriteVerses = () => {
   const favoritesObject = favorites as FavoriteList;
 
   console.log(favorites);
-  return (
-    <div className="container mx-auto px-4 mt-6" >
+  const renderFavorites = () => {
+    return (
+         <div className="container mx-auto px-4 mt-6" >
       <h1 className="text-3xl font-bold text-[#004694] mb-8">
         Seccion de versiculos biblicos
       </h1>
@@ -32,6 +33,20 @@ const FavoriteVerses = () => {
         </div>
       ))}
     </div>
+    );
+  };
+  
+  return (
+    !favorites || Object.keys(favorites).length === 0 ? (
+      <div className="container mx-auto px-4 py-[100px]">
+        <h1 className="text-3xl font-bold text-[#004694] mb-8">No tienes versículos favoritos</h1>
+        <p>Agrega algunos versículos a tus favoritos para verlos aquí.</p>
+      </div>
+    ) : (
+      renderFavorites()
+    )
+  
+ 
   );
 };
 
