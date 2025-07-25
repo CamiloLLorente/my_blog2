@@ -202,13 +202,13 @@ export const verses: Verses = {
   ],
   "nuevo_nacimiento": [
     {
-      id: 1,
+      id: 3,
       title: "Juan 3:3",
       description: "De cierto, de cierto te digo que el que no naciere de nuevo, no puede ver el reino de Dios.",
       favorite: false,
     },
     {
-      id: 2,
+      id: 4,
       title: "2 Corintios 5:17",
       description: "De modo que si alguno está en Cristo, nueva criatura es; las cosas viejas pasaron; he aquí todas son hechas nuevas.",
       favorite: false,
@@ -216,13 +216,13 @@ export const verses: Verses = {
   ],
   "repasa_tus_versiculos": [
     {
-      id: 1,
+      id: 5,
       title: "Salmos 119:11",
       description: "En mi corazón he guardado tus dichos, para no pecar contra ti.",
       favorite: false,
     },
     {
-      id: 2,
+      id: 6,
       title: "Salmos 119:105",
       description: "Lámpara es a mis pies tu palabra, y lumbrera a mi camino.",
       favorite: false,
@@ -230,25 +230,25 @@ export const verses: Verses = {
   ],
   "arrepentimiento": [
     {
-      id: 1,
+      id: 7,
       title: "Hechos 3:19",
       description: "Así que, arrepentíos y convertíos, para que sean borrados vuestros pecados, para que vengan de la presencia del Señor tiempos de refrigerio.",
       favorite: false,
     },
     {
-      id: 2,
+      id: 8,
       title: "2 Crónicas 7:14",
       description: "Si se humillare mi pueblo, sobre el cual es invocado mi nombre, y oraren y buscaren mi rostro, y se convirtieren de sus malos caminos; entonces yo oiré desde los cielos, y perdonaré sus pecados, y sanaré su tierra.",
       favorite: false,
     },
      {
-      id: 3,
+      id: 9,
       title: "Hechos 3:19-11",
       description: "Así que, arrepentíos y convertíos, para que sean borrados vuestros pecados, para que vengan de la presencia del Señor tiempos de refrigerio.",
       favorite: false,
     },
     {
-      id: 4,
+      id: 10,
       title: "2 Crónicas 7:144",
       description: "Si se humillare mi pueblo, sobre el cual es invocado mi nombre, y oraren y buscaren mi rostro, y se convirtieren de sus malos caminos; entonces yo oiré desde los cielos, y perdonaré sus pecados, y sanaré su tierra.",
       favorite: false,
@@ -256,13 +256,13 @@ export const verses: Verses = {
   ],
   "conversion": [
     {
-      id: 1,
+      id: 11,
       title: "Romanos 10:9-10",
       description: "Que si confesares con tu boca que Jesús es el Señor, y creyeres en tu corazón que Dios le levantó de los muertos, serás salvo. Porque con el corazón se cree para justicia, pero con la boca se confiesa para salvación.",
       favorite: false,
     },
     {
-      id: 2,
+      id: 12,
       title: "Hechos 2:38",
       description: "Pedro les dijo: Arrepentíos, y bautícese cada uno de vosotros en el nombre de Jesucristo para perdón de los pecados; y recibiréis el don del Espíritu Santo.",
       favorite: false,
