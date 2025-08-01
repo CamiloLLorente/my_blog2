@@ -1,39 +1,29 @@
 import { useState, useEffect, useCallback } from "react";
-import { getVerseByName, setFavorite } from "../services/sectionVersesService";
+import { getVerseBySlug, setFavoriteStorage,updateVersesStorage } from "../services/sectionVersesService";
 import { Verse } from "../data/interfaces";
 
-const useVerses = (name?: string) => {
+const useVerses = (slug?: string) => {
   const [verses, setVerses] = useState<Verse[]>([]);
   const [refresh, setRefresh] = useState(false);
 
   const fetchVerses = useCallback(async () => {
-    if (!name) return;
+    if (!slug) return;
     try {
-      const response = await getVerseByName(name);
+      const response = await getVerseBySlug(slug);
       setVerses(response || []);
     } catch (error) {
       console.error("Error fetching verses:", error);
     }
-  }, [name]);
+  }, [slug]);
+  
 
-  const toggleFavorite = useCallback(
-    async (id: number, favorite: boolean,title:string,description:string) => {
-      if (!name) return;
-      try {
-        await setFavorite(name, id, !favorite, title,description);
-        setRefresh((prev) => !prev); // Forzar actualización
-      } catch (error) {
-        console.error("Error updating favorite:", error);
-      }
-    },
-    [name]
-  );
+
 
   useEffect(() => {
     fetchVerses();
   }, [fetchVerses, refresh]);
 
-  return { verses, toggleFavorite };
+  return { verses, setRefresh };
 };
 
 export default useVerses;

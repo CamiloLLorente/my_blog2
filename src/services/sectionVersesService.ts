@@ -7,7 +7,7 @@ export const getSectionsVerses = async (): Promise<SectionVerses[]> => {
     return sectionsVerses;
  };
 
-export const getVerseByName = async (slug: string): Promise<Verse[] | undefined> => {
+export const getVerseBySlug = async (slug: string): Promise<Verse[] | undefined> => {
     const storedVerse = localStorage.getItem(`verse_${slug}`);
     if (storedVerse) {
         return JSON.parse(storedVerse) as Verse[];
@@ -22,20 +22,11 @@ export const getVerseByName = async (slug: string): Promise<Verse[] | undefined>
     return verse;
 };
 
-export const setFavorite = async (slug: string, id: number,favorite: boolean, title:string,description:string) => {
-    const storedVerse =  localStorage.getItem(`verse_${slug}`);
+export const setFavoriteStorage = async (slug: string, id: number,favorite: boolean, title:string,description:string) => {
     
     const storedFavorite = localStorage.getItem(`favorite`);
-    if (storedVerse) {
-        const versesArray = JSON.parse(storedVerse) as Verse[];
-        const verseIndex = versesArray.findIndex((v) => v.id === id);
-        if (verseIndex !== -1) {
-            versesArray[verseIndex].favorite = favorite;
-            localStorage.setItem(`verse_${slug}`, JSON.stringify(versesArray));
-        }
-    }
+ 
     if (storedFavorite) {
-        console.log(slug, id, favorite, title, description);
         const favorites = JSON.parse(storedFavorite) as FavoriteList;
         if (!favorites[slug]) {
             favorites[slug] = [];
@@ -63,4 +54,18 @@ export const setFavorite = async (slug: string, id: number,favorite: boolean, ti
         };
         localStorage.setItem(`favorite`, JSON.stringify(favorites));
     }
+}
+
+export const updateVersesStorage = async (slug: string, id: number,favorite: boolean) => {
+    const storedVerse =  localStorage.getItem(`verse_${slug}`);
+    
+    if (storedVerse) {
+        const versesArray = JSON.parse(storedVerse) as Verse[];
+        const verseIndex = versesArray.findIndex((v) => v.id === id);
+        if (verseIndex !== -1) {
+            versesArray[verseIndex].favorite = favorite;
+            localStorage.setItem(`verse_${slug}`, JSON.stringify(versesArray));
+        }
+    }
+ 
 }

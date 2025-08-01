@@ -2,7 +2,8 @@ import { FavoriteList } from "../../data/interfaces";
 import  useFavorite  from "../../hook/useFavorite";
 import CardFavorite from "../../components/CardFavorite";
 const FavoriteVerses = () => {
-  const { favorites } = useFavorite();
+  const { favorites, toggleFavorite } = useFavorite();
+  
   const favoritesObject = favorites as FavoriteList;
 
   console.log(favorites);
@@ -26,7 +27,7 @@ const FavoriteVerses = () => {
               favorite={verse.favorite}
               description={verse.description}
               slug={category || ""}
-              onFavoriteUpdate={() => {}}
+              onFavoriteUpdate={() => toggleFavorite(verse.id, verse.favorite, verse.title, verse.description, category || "")}
             />
           ))}
           </div>
@@ -35,6 +36,8 @@ const FavoriteVerses = () => {
     </div>
     );
   };
+
+
   
   return (
     !favorites || Object.keys(favorites).length === 0 ? (

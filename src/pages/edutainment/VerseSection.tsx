@@ -1,10 +1,13 @@
 import { useParams } from "react-router-dom";
 import CardFavorite from "../../components/CardFavorite";
 import useVerses from "../../hook/useVerses";
+import useFavorite from "../../hook/useFavorite";
 
 const VerseSection = () => {
   const { name } = useParams<{ name?: string }>();
-  const { verses, toggleFavorite } = useVerses(name);
+  const { verses, setRefresh } = useVerses(name);
+  const { favorites, toggleFavorite} = useFavorite();
+  console.log(name);
   console.log("verses", verses);
   return (
     <div className="container mx-auto px-4 py-[100px]">
@@ -21,7 +24,10 @@ const VerseSection = () => {
             favorite={verse.favorite}
             description={verse.description}
             slug={name || ""}
-            onFavoriteUpdate={() => toggleFavorite(verse.id, verse.favorite,verse.title,verse.description)}
+            onFavoriteUpdate={() => {
+              toggleFavorite(verse.id, verse.favorite, verse.title, verse.description, name || "")
+              setRefresh((prev) => !prev);
+            }}
           />
         ))}
       </div>
