@@ -1,6 +1,7 @@
 import { FavoriteList } from "../../data/interfaces";
 import  useFavorite  from "../../hook/useFavorite";
 import CardFavorite from "../../components/CardFavorite";
+import { Link } from "react-router-dom";
 const FavoriteVerses = () => {
   const { favorites, toggleFavorite } = useFavorite();
   
@@ -10,7 +11,7 @@ const FavoriteVerses = () => {
   const renderFavorites = () => {
     return (
          <div className="container mx-auto px-4 mt-6" >
-      <h1 className="text-3xl font-bold text-[#004694] mb-8">
+      <h1 className="text-3xl font-bold text-[#004694] mb-8 mt-20">
         Seccion de versiculos biblicos
       </h1>
       {Object.entries(favoritesObject).map(([category, verses]) => (
