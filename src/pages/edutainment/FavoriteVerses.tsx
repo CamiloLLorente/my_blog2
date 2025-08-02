@@ -33,6 +33,11 @@ const FavoriteVerses = () => {
           </div>
         </div>
       ))}
+      <Link to="/bible_verses_section" className="text-blue-600 hover:underline">
+        <button className="bg-green-600 text-white px-4 py-3 rounded-md my-6  hover:bg-green-700 hover:text-white transition-colors">
+          Añadir mas versículos a favoritos
+        </button>
+      </Link>
     </div>
     );
   };
