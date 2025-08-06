@@ -1,8 +1,14 @@
 import { useEffect, useState } from "react";
 import SectionCard from "../../components/SectionCard";
 import { sectionsVerses } from "../../data/data";
+import Breadcrumb, { BreadcrumbItem } from "../../components/Breadcrumb";
 
 const BibleVersesSection = () => {
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { label: "Inicio", path: "/" },
+    { label: "Descubre y Aprende", path: "/discover-and-learn" },
+    { label: "Sección de Versículos", path: "/bible_verses_section" },
+  ];
   const [sections, setSections] = useState<typeof sectionsVerses>([]);
   useEffect(() => {
     const fetchSections = async () => {
@@ -17,8 +23,9 @@ const BibleVersesSection = () => {
     fetchSections();
   })
   return (
-    <div className="container mx-auto px-4 py-10">
-      <h1 className="text-3xl font-bold text-[#004694] mb-8 my-10">
+    <div className="container mx-auto px-4 py-10 mb-6 my-10">
+      <Breadcrumb items={breadcrumbItems} />
+      <h1 className="text-3xl font-bold text-[#004694] mb-8 my-6">
         Seccion de versiculos biblicos
       </h1>
       <p>

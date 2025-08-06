@@ -2,8 +2,15 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Verse } from '../../data/interfaces';
 import useFavorite from '../../hook/useFavorite';
+import Breadcrumb from '../../components/Breadcrumb';
 
 const ReviewYourVerses = () => {
+
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { label: "Inicio", path: "/" },
+    { label: "Descubre y Aprende", path: "/discover-and-learn" },
+    { label: "Repasa tus Versículos", path: "/review_your_verses" },
+  ];
   // Obtiene los versículos favoritos del usuario desde el hook
   const { favorites } = useFavorite();
   // Estado: Todos los versículos favoritos cargados
@@ -283,6 +290,9 @@ const ReviewYourVerses = () => {
 
   return (
     <div className="container mx-auto px-4 py-20 flex flex-col items-center">
+      <div className='self-start mb-6'>
+        <Breadcrumb items={breadcrumbItems} />
+      </div>
       <h1 className="text-4xl font-bold text-[#004694] mb-8">Repasa tus Versículos</h1>
       {renderGame()}
       {gameStarted && (

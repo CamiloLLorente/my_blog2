@@ -1,10 +1,16 @@
+import Breadcrumb, { BreadcrumbItem } from '../../components/Breadcrumb';
 import Card from '../../components/Card';
 import { useEdutainment } from '../../hook/edutainment';
 
 const DiscoverAndLearn = () => {
   const { edutainmentFilter } = useEdutainment();
+  const breadcrumbItems: BreadcrumbItem[] = [
+      { label: "Inicio", path: "/" },
+      { label: "Descubre y Aprende", path: "/discover-and-learn" },
+    ];
   return (
     <div className="container mx-auto px-4 py-20">
+      <Breadcrumb items={breadcrumbItems} />
       <h1 className="text-3xl font-bold text-[#004694] mb-8 ">Aprende y Diviertete</h1>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {edutainmentFilter.map((post) => (
